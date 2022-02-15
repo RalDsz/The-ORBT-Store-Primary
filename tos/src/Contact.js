@@ -57,7 +57,7 @@ export const ContactUs = () => {
             <input  type="text" placeholder="Reason Of  Contact" name="user_subject" />
             <input  type="text" placeholder="Email" name="user_email" />
             <textarea  rows="5" placeholder="Message" name="message" />
-            <button onClick={handleClick,sendEmail} >Submit</button>
+            <button onClick={sendEmail} >Submit</button>
             
           </form>
         </div>
