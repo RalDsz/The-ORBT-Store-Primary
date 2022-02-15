@@ -7,6 +7,7 @@ import"./contact.css"
 
 
 
+
 export const ContactUs = () => {
   const form = useRef();
 
@@ -20,7 +21,12 @@ export const ContactUs = () => {
           console.log(error.text);
       });
   };
-
+  const handleClick = event => {
+    alert("Thank you for Contacting Us We will get back to you z.");
+    event.preventDefault();
+    
+  };
+ 
   return (
     <div className="c">
       <div className="c-bg"></div>
@@ -30,7 +36,7 @@ export const ContactUs = () => {
           <div className="c-info">
             <div className="c-info-item">
               <img src={Phone} alt="" className="c-icon" />
-              +1 1234 556 75
+              Whatsapp Number: +1 (425) 247-3143
             </div>
             <div className="c-info-item">
               <img className="c-icon" src={Email} alt="" />
@@ -44,14 +50,14 @@ export const ContactUs = () => {
         </div>
         <div className="c-right">
           <p className="c-desc">
-            <b>What’s your story?</b> Get in touch with us thriugh email and we will respond to ASAP
+            <b>What’s your story?</b> Get in touch with us through email and we will respond to ASAP
           </p>
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form} onSubmit={handleClick}>
             <input  type="text" placeholder="Name" name="user_name" />
             <input  type="text" placeholder="Reason Of  Contact" name="user_subject" />
             <input  type="text" placeholder="Email" name="user_email" />
             <textarea  rows="5" placeholder="Message" name="message" />
-            <button>Submit</button>
+            <button onClick={handleClick,sendEmail} >Submit</button>
             
           </form>
         </div>

@@ -5,9 +5,6 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from './fbase';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle'
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-
 
 function Header() {
   const [ {basket, user}, dispatch] = useStateValue();
@@ -33,11 +30,9 @@ function Header() {
         <input className="header__searchInput" type="text" />
         <SearchIcon className="header__searchIcon" />
       </div>
-      
 
       <div className="header__nav">
         <Link to={!user && "/login"}>
-          
         <div onClick={handleAuthentication} className="header__option">
                         <span className="header__optionLineOne"> Hello, {!user ? 'Guest' : user?.email} </span>
                         <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
@@ -52,12 +47,10 @@ function Header() {
           </div>
         
         
-        <Link to ="/contact">
+        <Link to = "/ct"> 
         <div className="header__option">
-        <  MailOutlineIcon />
           <span className="header__optionLineOne">Contact</span>
-          <span className="header__optionLineTwo"> us</span>
-           
+          <span className="header__optionLineTwo">ORBT </span>
         </div>
         </Link>
 
