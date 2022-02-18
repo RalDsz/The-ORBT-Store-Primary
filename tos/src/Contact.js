@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import Phone from './phone.png';
+import Phone from './email.png';
 import Email from './email.png';
 import Address from './map.png';
 import"./contact.css"
